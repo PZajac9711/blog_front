@@ -1,0 +1,9 @@
+<div *ngFor="let item of posts$">
+  <app-item [id]="item.id"
+            [title]="item.title"
+            [author]="item.authorName"
+            [date]="item.publicationDate"
+            [postBody]="item.body"
+            [url]="item.imageUrl"
+  ></app-item>
+</div>
