@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import {DataService} from './serices/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemComponent } from './components/item/item.component';
+import { SingleComponent } from './components/single/single.component';
+import { MainComponent } from './components/main/main.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { ItemComponent } from './components/item/item.component';
     CategoriesComponent,
     SideComponent,
     FooterComponent,
-    ItemComponent
+    ItemComponent,
+    SingleComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

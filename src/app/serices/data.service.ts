@@ -14,4 +14,9 @@ export class DataService {
   getAll() {
     return this.http.get(this.url);
   }
+
+  // tslint:disable-next-line:typedef
+  getSpecific(title) {
+    return this.http.get(this.url + '/specific?title=' + title);
+  }
 }
