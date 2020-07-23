@@ -1,0 +1,46 @@
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+
+    <!-- Post Content Column -->
+    <div class="col-lg-8">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">Sign In</h5>
+                  <div class="form-label-group">
+                    <input [(ngModel)]="login" type="text" id="inputEmail" class="form-control" placeholder="Login" required autofocus style="margin: 10px 0;">
+                  </div>
+                  <div class="form-label-group">
+                    <input [(ngModel)]="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  </div>
+                  <button (click)="authenticateFront()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="margin: 10px 0;">Sign in</button>
+                  <hr class="my-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+      <!-- Search Widget -->
+      <app-search></app-search>
+
+      <!-- Categories Widget -->
+      <app-categories></app-categories>
+
+      <!-- Side Widget -->
+      <app-side></app-side>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->

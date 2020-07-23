@@ -15,6 +15,8 @@ import { ItemComponent } from './components/item/item.component';
 import { SingleComponent } from './components/single/single.component';
 import { MainComponent } from './components/main/main.component';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { LoginComponent } from './components/login/login.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +29,14 @@ import { SummaryPipe } from './pipes/summary.pipe';
     ItemComponent,
     SingleComponent,
     MainComponent,
-    SummaryPipe
+    SummaryPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
