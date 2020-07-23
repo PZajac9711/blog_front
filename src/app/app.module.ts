@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ItemComponent } from './components/item/item.component';
 import { SingleComponent } from './components/single/single.component';
 import { MainComponent } from './components/main/main.component';
+import { SummaryPipe } from './pipes/summary.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { MainComponent } from './components/main/main.component';
     FooterComponent,
     ItemComponent,
     SingleComponent,
-    MainComponent
+    MainComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

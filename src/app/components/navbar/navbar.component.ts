@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AdminGuardGuard} from '../../serices/admin-guard.guard';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public adminGuard: AdminGuardGuard) {
+  }
 
   ngOnInit(): void {
   }
