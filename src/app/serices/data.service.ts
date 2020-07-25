@@ -13,8 +13,8 @@ export class DataService {
   }
 
   // tslint:disable-next-line:typedef
-  getAll() {
-    return this.http.get(this.url);
+  getAll(pageNumber) {
+    return this.http.get(this.url + '?page=' + pageNumber);
   }
 
   // tslint:disable-next-line:typedef

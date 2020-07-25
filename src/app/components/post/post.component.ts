@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataService} from '../../serices/data.service';
 
 @Component({
@@ -7,12 +7,15 @@ import {DataService} from '../../serices/data.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  public posts$: any;
+
   constructor(private data: DataService) {
   }
+  public posts$: any;
+  @Input() pageNumber;
 
   ngOnInit(): void {
-    this.data.getAll().subscribe(response => {
+    this.data.getAll(this.pageNumber).subscribe(response => {
+      console.log(response);
       this.posts$ = response;
     });
   }

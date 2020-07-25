@@ -24,6 +24,10 @@ const routes: Routes = [
       path: 'dashboard',
       component: DashboardComponent,
       canActivate: [AdminGuardGuard]
+    },
+    {
+      path: 'page/:number',
+      component: MainComponent
     }
   ]
 ;
