@@ -10,7 +10,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { SideComponent } from './components/side/side.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {DataService} from './serices/data.service';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { ItemComponent } from './components/item/item.component';
 import { SingleComponent } from './components/single/single.component';
 import { MainComponent } from './components/main/main.component';
@@ -18,6 +18,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {AuthInterceptor} from './serices/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

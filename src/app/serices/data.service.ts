@@ -38,4 +38,19 @@ export class DataService {
     );
   }
 
+  // tslint:disable-next-line:typedef
+  addPost(urlInput, titleInput, bodyInput) {
+    return this.http.post('http://localhost:8080/api/posts/add', {
+      url: urlInput,
+      title: titleInput,
+      body: bodyInput
+    }).pipe(
+      map((result: any) => {
+        if (result) {
+          return true;
+        }
+        return false;
+      })
+    );
+  }
 }

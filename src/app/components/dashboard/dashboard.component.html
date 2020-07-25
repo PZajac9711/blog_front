@@ -7,18 +7,18 @@
       <h1>Create post</h1>
         <div class="form-group has-error">
           <label>Image-url <span class="require">*</span></label>
-          <input type="text" class="form-control" name="slug" />
+          <input type="text" class="form-control" name="slug" [(ngModel)]="url"/>
           <span class="help-block">Field not entered!</span>
         </div>
 
         <div class="form-group">
           <label>Title <span class="require">*</span></label>
-          <input type="text" class="form-control" name="title" />
+          <input type="text" class="form-control" name="title" [(ngModel)]="title"/>
         </div>
 
         <div class="form-group">
           <label>Description</label>
-          <textarea rows="5" class="form-control" name="description" ></textarea>
+          <textarea rows="5" class="form-control" name="description" [(ngModel)]="body"></textarea>
         </div>
 
         <div class="form-group">
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" (click)="addPost()">
             Add post
           </button>
         </div>
