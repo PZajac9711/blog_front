@@ -3,6 +3,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {SingleComponent} from './components/single/single.component';
 import {MainComponent} from './components/main/main.component';
 import {LoginComponent} from './components/login/login.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {AdminGuardGuard} from './serices/admin-guard.guard';
 
 const routes: Routes = [
     {
@@ -16,6 +18,12 @@ const routes: Routes = [
     {
       path: 'login',
       component: LoginComponent
+    }
+    ,
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+      canActivate: [AdminGuardGuard]
     }
   ]
 ;

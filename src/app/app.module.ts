@@ -17,6 +17,7 @@ import { MainComponent } from './components/main/main.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import {FormsModule} from '@angular/forms';
     SingleComponent,
     MainComponent,
     SummaryPipe,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

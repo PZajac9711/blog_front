@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AdminGuardGuard} from '../../serices/admin-guard.guard';
-import {LoginComponent} from '../login/login.component';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +7,7 @@ import {LoginComponent} from '../login/login.component';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
   constructor(public adminGuard: AdminGuardGuard) {
   }
 
@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  deleteToken(){
+  deleteToken() {
     localStorage.clear();
   }
 }
