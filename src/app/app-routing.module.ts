@@ -5,6 +5,7 @@ import {MainComponent} from './components/main/main.component';
 import {LoginComponent} from './components/login/login.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {AdminGuardGuard} from './serices/admin-guard.guard';
+import {EditComponent} from './components/edit/edit.component';
 
 const routes: Routes = [
     {
@@ -28,6 +29,11 @@ const routes: Routes = [
     {
       path: 'page/:number',
       component: MainComponent
+    },
+    {
+      path: 'edit/:title',
+      component: EditComponent,
+      canActivate: [AdminGuardGuard]
     }
   ]
 ;

@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {AuthInterceptor} from './serices/auth.interceptor';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {AuthInterceptor} from './serices/auth.interceptor';
     MainComponent,
     SummaryPipe,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

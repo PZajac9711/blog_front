@@ -63,4 +63,14 @@ export class DataService {
   changePostStatus(id) {
     return this.http.get('http://localhost:8080/api/posts/changestatus?id=' + id);
   }
+
+  // tslint:disable-next-line:typedef
+  updatePost(titleInput, urlInput, bodyInput, idInput) {
+    return this.http.post('http://localhost:8080/api/posts/editPost', {
+      id: idInput,
+      url: urlInput,
+      title: titleInput,
+      body: bodyInput
+    });
+  }
 }

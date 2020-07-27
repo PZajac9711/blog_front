@@ -50,7 +50,7 @@
             <td class="text-holder">{{item.id}}</td>
             <td class="text-holder">{{item.title}}</td>
             <td class="button-holder"><button type="button" class="btn btn-primary" (click)="changeStatus(item.id)">{{item.published}}</button></td>
-            <td class="button-holder"><button type="button" class="btn btn-primary">Edit</button></td>
+            <td class="button-holder"><button type="button" class="btn btn-primary" [routerLink]="['/edit',item.title]">Edit</button></td>
           </tr>
         </tbody>
       </table>
