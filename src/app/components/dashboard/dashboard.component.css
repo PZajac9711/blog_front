@@ -1,0 +1,9 @@
+.button-holder{
+  text-align: center;
+}
+.button-holder button{
+  width: 100%;
+}
+.text-holder{
+  padding: 10px;
+}

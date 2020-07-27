@@ -53,4 +53,14 @@ export class DataService {
       })
     );
   }
+
+  // tslint:disable-next-line:typedef
+  getAllPost() {
+    return this.http.get('http://localhost:8080/api/posts/findall');
+  }
+
+  // tslint:disable-next-line:typedef
+  changePostStatus(id) {
+    return this.http.get('http://localhost:8080/api/posts/changestatus?id=' + id);
+  }
 }

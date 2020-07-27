@@ -30,6 +30,30 @@
             Add post
           </button>
         </div>
+      <h1>All Posts</h1>
+      <table id="dtVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0"
+             width="100%">
+        <thead>
+        <tr>
+          <th class="th-sm">ID
+          </th>
+          <th class="th-sm">Title
+          </th>
+          <th class="th-sm">Published
+          </th>
+          <th class="th-sm">Edit
+          </th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let item of allPosts$">
+          <tr>
+            <td class="text-holder">{{item.id}}</td>
+            <td class="text-holder">{{item.title}}</td>
+            <td class="button-holder"><button type="button" class="btn btn-primary" (click)="changeStatus(item.id)">{{item.published}}</button></td>
+            <td class="button-holder"><button type="button" class="btn btn-primary">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   <!-- /.row -->
   </div>
