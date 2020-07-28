@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, NavigationEnd} from '@angular/router';
 import {DataService} from '../../serices/data.service';
+import {AdminGuardGuard} from '../../serices/admin-guard.guard';
 
 @Component({
   selector: 'app-single',
@@ -10,7 +11,7 @@ import {DataService} from '../../serices/data.service';
 export class SingleComponent implements OnInit {
   public post$: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, private data: DataService) {
+  constructor(private router: Router, private route: ActivatedRoute, private data: DataService, public adminGuard: AdminGuardGuard) {
   }
 
   ngOnInit(): void {

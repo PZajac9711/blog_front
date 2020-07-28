@@ -17,7 +17,7 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" *ngIf="!adminGuard.canLogin()">Sign Up</a>
+          <a class="nav-link" [routerLink]="['/register']" *ngIf="!adminGuard.canLogin()">Sign Up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="!adminGuard.canLogin()" [routerLink]="['/login']">Login</a>

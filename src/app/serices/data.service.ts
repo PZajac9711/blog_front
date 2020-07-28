@@ -73,4 +73,13 @@ export class DataService {
       body: bodyInput
     });
   }
+
+  // tslint:disable-next-line:typedef
+  register(loginI, passwordI, emailI) {
+    return this.http.post('http://localhost:8080/api/registration', {
+      login: loginI,
+      password: passwordI,
+      email: emailI
+    });
+  }
 }

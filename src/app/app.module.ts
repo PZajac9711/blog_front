@@ -20,6 +20,7 @@ import {FormsModule} from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {AuthInterceptor} from './serices/auth.interceptor';
 import { EditComponent } from './components/edit/edit.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EditComponent } from './components/edit/edit.component';
     SummaryPipe,
     LoginComponent,
     DashboardComponent,
-    EditComponent
+    EditComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
