@@ -27,14 +27,13 @@
         <div class="card-body">
           <form>
             <div class="form-group">
-              <textarea class="form-control" rows="3"></textarea>
+              <textarea rows="5" class="form-control" name="description" [(ngModel)]="body"></textarea>
             </div>
-            <button *ngIf="adminGuard.canLogin()" type="submit" class="btn btn-primary">Submit</button>
+            <button *ngIf="adminGuard.canLogin()" (click)="addComment()" type="submit" class="btn btn-primary">Submit</button>
             <p *ngIf="!adminGuard.canLogin()">You need to be logged to leave a comment</p>
           </form>
         </div>
       </div>
-
       <!-- Single Comment -->
       <div class="media mb-4" *ngFor="let item of post$.comments">
         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">

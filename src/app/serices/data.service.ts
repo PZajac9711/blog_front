@@ -82,4 +82,10 @@ export class DataService {
       email: emailI
     });
   }
+
+  // tslint:disable-next-line:typedef
+  addComment(content, id) {
+    console.log(content);
+    return this.http.get('http://localhost:8080/api/posts/addComment?content=' + content + '&id=' + id);
+  }
 }

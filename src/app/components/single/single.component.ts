@@ -10,7 +10,7 @@ import {AdminGuardGuard} from '../../serices/admin-guard.guard';
 })
 export class SingleComponent implements OnInit {
   public post$: any;
-
+  body;
   constructor(private router: Router, private route: ActivatedRoute, private data: DataService, public adminGuard: AdminGuardGuard) {
   }
 
@@ -30,4 +30,11 @@ export class SingleComponent implements OnInit {
     });
   }
 
+  // tslint:disable-next-line:typedef
+  addComment(){
+    this.data.addComment(this.body, this.post$.id).subscribe(response => {
+      console.log(response);
+      window.location.reload();
+    });
+  }
 }
