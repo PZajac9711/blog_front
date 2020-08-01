@@ -7,6 +7,7 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {AdminGuardGuard} from './serices/admin-guard.guard';
 import {EditComponent} from './components/edit/edit.component';
 import {RegisterComponent} from './components/register/register.component';
+import {FindComponent} from './components/find/find.component';
 
 const routes: Routes = [
     {
@@ -39,6 +40,10 @@ const routes: Routes = [
     {
       path: 'register',
       component: RegisterComponent
+    },
+    {
+      path: 'find/:word',
+      component: FindComponent
     }
   ]
 ;

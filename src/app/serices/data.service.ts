@@ -56,12 +56,12 @@ export class DataService {
 
   // tslint:disable-next-line:typedef
   getAllPost() {
-    return this.http.get('http://localhost:8080/api/posts/findall');
+    return this.http.get('http://localhost:8080/api/posts/findAll');
   }
 
   // tslint:disable-next-line:typedef
   changePostStatus(id) {
-    return this.http.get('http://localhost:8080/api/posts/changestatus?id=' + id);
+    return this.http.get('http://localhost:8080/api/posts/changeStatus?id=' + id);
   }
 
   // tslint:disable-next-line:typedef
@@ -87,5 +87,10 @@ export class DataService {
   addComment(content, id) {
     console.log(content);
     return this.http.get('http://localhost:8080/api/posts/addComment?content=' + content + '&id=' + id);
+  }
+
+  // tslint:disable-next-line:typedef
+  findPosts(word) {
+    return this.http.get('http://localhost:8080/api/posts/searchForPosts?word=' + word);
   }
 }
