@@ -22,6 +22,7 @@ import {AuthInterceptor} from './serices/auth.interceptor';
 import { EditComponent } from './components/edit/edit.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FindComponent } from './components/find/find.component';
+import { ResetComponent } from './components/reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FindComponent } from './components/find/find.component';
     DashboardComponent,
     EditComponent,
     RegisterComponent,
-    FindComponent
+    FindComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

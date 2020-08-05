@@ -80,7 +80,7 @@ export class DataService {
       login: loginI,
       password: passwordI,
       email: emailI
-    });
+    }, {observe: 'response'});
   }
 
   // tslint:disable-next-line:typedef
@@ -92,5 +92,15 @@ export class DataService {
   // tslint:disable-next-line:typedef
   findPosts(word) {
     return this.http.get('http://localhost:8080/api/posts/searchForPosts?word=' + word);
+  }
+
+  // tslint:disable-next-line:typedef
+  sendResetPasswordEmail(email) {
+    return this.http.get('http://localhost:8080/api/generateResetPasswordMail?email=' + email);
+  }
+
+  // tslint:disable-next-line:typedef
+  resetPassword(token, password) {
+    return this.http.get('http://localhost:8080/api/resetPassword?token=' + token + '&password=' + password, {observe: 'response'});
   }
 }

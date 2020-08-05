@@ -17,6 +17,8 @@ export class SearchComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   go() {
+    // tslint:disable-next-line:only-arrow-functions
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     if (this.word !== '') {
       this.router.navigate(['/find', this.word]);
     }

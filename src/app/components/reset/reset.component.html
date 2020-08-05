@@ -1,0 +1,62 @@
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+
+    <!-- Post Content Column -->
+    <div class="col-lg-8">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">Reset Password</h5>
+                <div class="form-label-group" *ngIf="!tokenIsSet">
+                  <div *ngIf="!send" class="form-label-group">
+                    <input [(ngModel)]="email" type="text" id="inputEmail" class="form-control" placeholder="Login"
+                           required autofocus style="margin: 10px 0;">
+                  </div>
+                  <button *ngIf="!send" (click)="sendEmail()" class="btn btn-lg btn-primary btn-block" type="submit"
+                          style="margin: 10px 0;">Reset Password
+                  </button>
+                </div>
+                <div class="form-label-group" *ngIf="tokenIsSet && !isReset">
+                  <div>
+                    <input [(ngModel)]="password" type="password" id="password" class="form-control" placeholder="password"
+                           required autofocus style="margin: 10px 0;">
+                  </div>
+                  <div>
+                    <input [(ngModel)]="repassword" type="password" id="repassword" class="form-control" placeholder="password"
+                           required autofocus style="margin: 10px 0;">
+                  </div>
+                  <button (click)="resetPassword()" class="btn btn-lg btn-primary btn-block" type="submit"
+                          style="margin: 10px 0;">Reset Password
+                  </button>
+                </div>
+                <p>{{information}}</p>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+      <!-- Search Widget -->
+      <app-search></app-search>
+
+      <!-- Categories Widget -->
+      <app-categories></app-categories>
+
+      <!-- Side Widget -->
+      <app-side></app-side>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->

@@ -8,6 +8,7 @@ import {AdminGuardGuard} from './serices/admin-guard.guard';
 import {EditComponent} from './components/edit/edit.component';
 import {RegisterComponent} from './components/register/register.component';
 import {FindComponent} from './components/find/find.component';
+import {ResetComponent} from './components/reset/reset.component';
 
 const routes: Routes = [
     {
@@ -44,6 +45,14 @@ const routes: Routes = [
     {
       path: 'find/:word',
       component: FindComponent
+    },
+    {
+      path: 'reset',
+      component: ResetComponent
+    },
+    {
+      path: 'reset/:token',
+      component: ResetComponent
     }
   ]
 ;
